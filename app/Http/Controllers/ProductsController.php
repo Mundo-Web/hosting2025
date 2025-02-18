@@ -178,7 +178,7 @@ class ProductsController extends Controller
 
 
       $data['atributes'] = $jsonAtributos;
-
+      $cleanedData['description'] = $data['description'];
 
       $cleanedData = Arr::where($data, function ($value, $key) {
         return !is_null($value);

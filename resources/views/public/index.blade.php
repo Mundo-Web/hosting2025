@@ -91,6 +91,46 @@
 @section('content')
     <main>
         
+       
+        <section class="bg-center  lg:h-svh bg-cover bg-no-repeat flex flex-col justify-center relative px-[5%]">
+            {{-- style="background-image: url({{asset('images/img/tc_banner.png')}})"                    --}}
+            {{-- <img class="object-cover absolute top-0 left-0 h-full object-left w-full bg-gradient-to-r from-[#00388C] to-transparent" src="{{asset('images/img/tc_textura.svg')}}" /> --}}
+            {{-- <img class="object-cover absolute bottom-0 right-0 h-full object-bottom w-full" src="{{asset('images/img/tc_textura2.svg')}}" /> --}}
+            <div class="flex flex-col lg:flex-row py-0 h-full justify-center items-start lg:items-end rounded-3xl overflow-hidden">
+                
+                <div class="z-20 w-full min-h-[300px] px-[5%] h-full lg:w-1/2 flex flex-col justify-center bg-gradient-to-b from-[#068FFF] to-[#045699]">
+                    
+                    <div class="flex flex-col gap-1">
+                            <h3 class="font-gilroy_regular text-white text-xl line-clamp-1 flex flex-row gap-3 items-center">
+                                {{$textoshome->title1section ?? 'Ingrese texto'}}
+                            </h3>
+                            <h2 class="font-gilroy_bold text-white text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl line-clamp-5">{{$textoshome->description1section ?? 'Ingrese texto'}}</h2>
+                            <div class="hidden md:flex flex-col justify-start items-start font-gilroy_regular font-semibold">
+                                <a href="{{route('contacto')}}"><div class="bg-[#0E315D] px-4 xl:px-8 py-3 my-auto rounded-3xl">
+                                    <p class="leading-none text-white">Ver planes</p>
+                                </div></a>
+                            </div>
+                    </div>
+
+                </div>
+
+                <div class="z-20 w-full h-full lg:w-1/2 flex flex-col justify-end items-start lg:items-end">
+                    <img class="h-full object-left object-cover size-full w-full max-h-[500px] xl:max-h-none" src="{{asset('images/img/portadapapayah.png')}}" />
+                </div>
+
+            </div> 
+        </section>
+        
+        <section class="flex flex-col justify-center relative px-[5%] pt-10 xl:pt-16">
+           <div class="max-w-3xl mx-auto text-center">
+                <h2 class="font-gilroy_bold text-[#0B2A51] text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl line-clamp-5">Elige el Plan Perfecto para tu Proyecto</h2>
+                <h3 class="font-gilroy_regular text-[#0B2A51] text-xl line-clamp-1 flex flex-row gap-3 items-center">
+                    Desde sitios personales hasta negocios en crecimiento, tenemos el hosting ideal para ti. Todos incluyen dominio GRATIS y certificado SSL.
+                </h3>
+           </div>
+        </section>
+
+
     <div
         x-data="{
             selected: 1,
@@ -102,54 +142,25 @@
                 return this.products.filter(product => product.categoria_id === selectedCategory.id);
             }
         }"
-    >    
-        <section class="bg-center h-svh bg-cover bg-no-repeat flex flex-col justify-center relative" style="background-image: url({{asset('images/img/tc_banner.png')}})">
-                                
-            <img class="object-cover absolute top-0 left-0 h-full object-left w-full bg-gradient-to-r from-[#00388C] to-transparent" src="{{asset('images/img/tc_textura.svg')}}" />
-            <img class="object-cover absolute bottom-0 right-0 h-full object-bottom w-full" src="{{asset('images/img/tc_textura2.svg')}}" />
-            <div class="flex flex-col lg:flex-row px-[5%]  py-[5%]  lg:px-[5%]  gap-5 justify-center items-start lg:items-end">
-                <div class="z-20 w-full lg:w-3/4 2xl:w-2/3 flex flex-col gap-4 2xl:gap-10 justify-center">
-                    
-                    <div class="flex flex-col gap-1">
-                            <h3 class="font-gilroy_regular text-white text-xl line-clamp-1 flex flex-row gap-3 items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                    <path d="M16.3334 3.5H11.6667C7.26693 3.5 5.06705 3.5 3.70021 4.86683C2.33337 6.23367 2.33337 8.43355 2.33337 12.8333C2.33337 17.2331 2.33337 19.4331 3.70021 20.7998C5.06705 22.1667 7.26693 22.1667 11.6667 22.1667H16.3334C20.7331 22.1667 22.9331 22.1667 24.2998 20.7998C25.6667 19.4331 25.6667 17.2331 25.6667 12.8333C25.6667 8.43355 25.6667 6.23367 24.2998 4.86683C22.9331 3.5 20.7331 3.5 16.3334 3.5Z" stroke="white" stroke-width="1.75" stroke-linecap="round"/>
-                                    <path d="M19.7167 18.0833C19.7167 17.0524 20.5524 16.2167 21.5833 16.2167M15.9833 18.0833C15.9833 14.9905 18.4905 12.4833 21.5833 12.4833M12.25 18.0833C12.25 12.9287 16.4287 8.75 21.5833 8.75" stroke="white" stroke-width="1.75" stroke-linecap="round"/>
-                                    <path d="M21 22.167L22.1667 24.5003" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M7.00004 22.167L5.83337 24.5003" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                {{$textoshome->title1section ?? 'Ingrese texto'}}
-                            </h3>
-                            <h2 class="font-gilroy_bold text-white text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl line-clamp-3">{{$textoshome->description1section ?? 'Ingrese texto'}}</h2>
+    >
+        <section class="w-full relative flex justify-center items-center">
+            <div class="flex flex-wrap justify-center items-center max-w-3xl mx-auto gap-x-10 font-gotham_bold w-full overflow-hidden rounded-full bg-[#F4F4F4] mt-5">
+                <template x-for="(cat, index) in categories" :key="index">
+                    <div class="flex flex-row gap-5 md:gap-0 md:flex-col items-center justify-start md:justify-center md:items-center px-3 py-3 cursor-pointer">
+                        <div class="flex flex-col px-5 py-2 rounded-3xl"
+                            @click="selected = index" 
+                            :class="selected === index 
+                                ? 'bg-[#0E315D] text-white' 
+                                : 'text-[#0B2A51]' " 
+                            >
+                            <h2 class="text-lg xl:text-xl font-gilroy_semibold" x-text="cat.name"></h2>
+                        </div>
                     </div>
-   
-                    <div class="grid grid-cols-1 md:grid-cols-3 font-gotham_bold w-full overflow-hidden rounded-2xl bg-[#5599FF] mt-5">
-                        {{-- @foreach ($category as $categoria) --}}
-                        <template x-for="(cat, index) in categories" :key="index">
-                            <div    
-                                @click="selected = index" 
-                                :class="selected === index 
-                                    ? 'bg-[#004FC6]' 
-                                    : ''" 
-                                 class="flex flex-row gap-5 md:gap-0 md:flex-col items-center justify-start md:justify-center md:items-center px-6 py-7 cursor-pointer">
-                                <img class="w-12 h-12 object-contain" :src="cat.url_image + cat.name_image"  onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';"  />
-                                <div class="flex flex-col">
-                                    <h3 class="text-white text-lg xl:text-xl font-gilroy_semibold md:mt-5" x-text="cat.name"></h3>
-                                    <h2 class="text-white text-base font-gilroy_regular" x-text="cat.description"></h2>
-                                </div>
-                            </div>
-                        </template>
-                        {{-- @endforeach --}}
-                    </div>
-                    
-                </div>
-                <div class="z-20 w-full lg:w-1/4 2xl:w-1/3 flex flex-col justify-end items-start lg:items-end">
-                    
-                </div>
-            </div> 
+                </template>
+            </div>
         </section>
 
-        <section  class="bg-cover bg-opacity-100 relative pb-10 lg:pb-16 flex flex-col gap-10"  style="background-image: url('{{asset('images/img/tc_textura3.svg')}}');">
+        <section  class="bg-cover bg-opacity-100 relative py-10 lg:py-16 flex flex-col gap-10">
                 
                 <div class="px-[5%] md:px-[8%]  py-5 flex md:flex-row gap-5 md:gap-10 lg:-mt-10">
                     <div class="w-full">
@@ -157,112 +168,60 @@
                             <div class="swiper-wrapper">   
                                 <template x-for="producto in filteredProducts" :key="producto.id">
                                     <div class="swiper-slide">
-                                        <div class="flex flex-col gap-5 max-w-[390px] bg-white hover:bg-[#1EA7A2] bg-opacity-10 p-6 rounded-3xl mx-auto">
+                                        <div class="flex flex-col gap-4 max-w-[390px] bg-[#FAFAFA] p-6 rounded-3xl mx-auto">
                                             
                                             <!-- Título y precio -->
-                                            <div class="flex flex-wrap justify-between items-center w-full">
-                                                <h2 class="py-2 text-white text-lg font-gilroy_medium text-left w-auto line-clamp-1">
-                                                    <span x-text="producto.producto"></span>
-                                                </h2>
-                                                <h3 class="font-gilroy_bold text-white text-2xl">
+                                            <div class="flex flex-col gap-4 justify-start items-start w-full">
+                                                <div class="bg-[#068FFF] px-5 py-1 rounded-3xl overflow-hidden">
+                                                    <h2 class="text-white text-lg font-gilroy_medium text-left w-auto line-clamp-1">
+                                                        <span x-text="producto.producto"></span>
+                                                    </h2>
+                                                </div>
+                                                <h3 class="font-gilroy_bold text-[#0B2A51] text-4xl line-clamp-2">
                                                     S/ <span x-text="producto.precio"></span>
-                                                    <span class="font-gilroy_regular tracking-wide text-white text-base">/Mes</span>
+                                                    <span class="font-gilroy_regular font-semibold tracking-wide text-[#0B2A51] text-base">/anual</span>
                                                 </h3>
                                             </div>
                                             
-                                            <!-- Etiqueta adicional -->
-                                            <div class="flex flex-wrap gap-2 font-gilroy_regular justify-start items-start">
-                                                <template x-for="tag in producto.tags" :key="tag.id">
-                                                    <div class="bg-[#59C402] px-3 py-2 rounded-full tracking-normal" :style="'background-color: ' + tag.color">
-                                                        <p class="leading-none text-white text-sm" x-text="tag.name"></p>
-                                                    </div>
-                                                </template>
-                                            </div>
-                                
                                             <!-- Extracto y descripción -->
                                             <div class="flex flex-col">
                                                 <div class="flex flex-row gap-2 items-center">
-                                                    <h2 class="font-gilroy_extrabold text-white text-5xl line-clamp-3" x-text="producto.extract"></h2>
+                                                    <h2 class="font-gilroy_regular text-[#0B2A51] text-base line-clamp-3" x-text="producto.extract"></h2>
                                                 </div>
-                                                <h2 class="-mt-2 font-gilroy_regular text-white text-sm line-clamp-2" x-text="producto.name_fichatecnica"></h2>
                                             </div>
 
-                                            
-                                            <!-- Equipamiento -->
-                                            <div class="flex flex-col" x-show="producto.meta_title && producto.categoria_id === 1" >
-                                                <div class="flex flex-col gap-2 items-start p-3 rounded-xl" style="background-color: rgba(238, 249, 230, 0.16)">
-                                                    <h2 class="font-gilroy_medium text-white text-xl">Equipamiento y accesos TV</h2>
-                                                    <p class="font-gilroy_regular text-white text-sm -mt-2" x-text="producto.meta_title"></p>
-                                                </div>
-                                                
-                                            </div>
+                                            @php
+                                                    $caracteristicas = [];
+                                                    if (!empty($producto->description)) {
+                                                        preg_match_all('/<p>(.*?)<\/p>/s', $producto->peso, $matches);
+                                                        $caracteristicas = array_filter(array_map(fn($text) => trim(strip_tags($text)), $matches[1]), fn($text) => !empty($text));
+                                                    }
+                                            @endphp
 
-                                            <!-- Canales -->
-                                            <div class="flex flex-row gap-3" x-show="producto.canals && producto.categoria_id === 3">
-                                                <template x-for="canal in producto.canals.slice(-3)" :key="canal.id">
-                                                    <div><img class="w-12 h-12 object-contain rounded-full" :src="canal.imagen ? canal.imagen : '{{ asset('images/img/noimagen.jpg') }}'" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" /></div>
-                                                </template>
-                                                <div :data-id="producto.id" class="cursor-pointer botoncanales"><img class="w-12 h-12 object-contain rounded-full" src="{{ asset('images/img/canalmas.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" /></div>
-                                            </div>
-                                            
-                                            
-                                        
                                             <!-- Información adicional -->
+
                                             <div class="flex flex-col justify-center items-start font-gilroy_semibold group">
 
-                                                <div class="flex flex-row gap-2">
-                                                <h3 class="font-gilroy_light font-semibold tracking-wider text-white text-sm line-clamp-1 flex flex-row gap-1 items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                                        <path d="M7.86755 4.82665L8.85795 3.83627C9.97309 2.72113 11.433 2.25857 12.9781 2.18299C13.5791 2.15359 13.8796 2.13889 14.1205 2.37985C14.3615 2.6208 14.3468 2.92128 14.3174 3.52225C14.2418 5.06733 13.7792 6.52727 12.6641 7.64239L11.6737 8.63279C10.8581 9.44839 10.6262 9.68033 10.7974 10.565C10.9664 11.2408 11.13 11.8952 10.6386 12.3866C10.0425 12.9827 9.49875 12.9827 8.90269 12.3866L4.11374 7.59766C3.51768 7.00158 3.51766 6.45786 4.11374 5.86179C4.60513 5.37039 5.25955 5.53395 5.93533 5.70292C6.82002 5.87415 7.05195 5.64225 7.86755 4.82665Z" stroke="white" stroke-linejoin="round"/>
-                                                        <path d="M11.3306 5.16699H11.3366" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        <path d="M1.66669 14.8333L5.00002 11.5" stroke="white" stroke-linecap="round"/>
-                                                        <path d="M5.66669 14.8333L7.00002 13.5" stroke="white" stroke-linecap="round"/>
-                                                        <path d="M1.66669 10.8333L3.00002 9.5" stroke="white" stroke-linecap="round"/>
-                                                    </svg>
-                                                    <span x-text="producto.categoria_id === 3 ? 'Deco:' : 'Velocidad:'"></span>
+                                                <h3 class="font-gilroy_bold text-[#0B2A51] text-2xl">
+                                                    Características
                                                 </h3>
-                                                <h2 class="font-gilroy_regular text-white text-sm" x-text="producto.description" ></h2>
-                                                </div>
-
-                                                <div class="bg-white h-[1px] w-full mx-auto my-3"></div>
-
-                                                <div class="flex flex-row gap-2">
-                                                    <h3 class="font-gilroy_light font-semibold tracking-wider text-white text-sm line-clamp-1 flex flex-row gap-1 items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                                        <path d="M7.86755 4.82665L8.85795 3.83627C9.97309 2.72113 11.433 2.25857 12.9781 2.18299C13.5791 2.15359 13.8796 2.13889 14.1205 2.37985C14.3615 2.6208 14.3468 2.92128 14.3174 3.52225C14.2418 5.06733 13.7792 6.52727 12.6641 7.64239L11.6737 8.63279C10.8581 9.44839 10.6262 9.68033 10.7974 10.565C10.9664 11.2408 11.13 11.8952 10.6386 12.3866C10.0425 12.9827 9.49875 12.9827 8.90269 12.3866L4.11374 7.59766C3.51768 7.00158 3.51766 6.45786 4.11374 5.86179C4.60513 5.37039 5.25955 5.53395 5.93533 5.70292C6.82002 5.87415 7.05195 5.64225 7.86755 4.82665Z" stroke="white" stroke-linejoin="round"/>
-                                                        <path d="M11.3306 5.16699H11.3366" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        <path d="M1.66669 14.8333L5.00002 11.5" stroke="white" stroke-linecap="round"/>
-                                                        <path d="M5.66669 14.8333L7.00002 13.5" stroke="white" stroke-linecap="round"/>
-                                                        <path d="M1.66669 10.8333L3.00002 9.5" stroke="white" stroke-linecap="round"/>
-                                                    </svg>
-                                                        <span x-text="producto.categoria_id === 3 ? 'Netflix:' : 'Instalación:'"></span>
-                                                    </h3>
-                                                    <h2 class="font-gilroy_regular text-white text-sm"  x-text="producto.especificacion"></h2>
-                                                </div>
-
-                                                <div class="bg-white h-[1px] w-full mx-auto my-3"></div>
-
-                                                <div class="flex flex-row gap-2">
-                                                    <h3 class="font-gilroy_light font-semibold tracking-wider text-white text-sm line-clamp-1 flex flex-row gap-1 items-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                                                        <path d="M7.86755 4.82665L8.85795 3.83627C9.97309 2.72113 11.433 2.25857 12.9781 2.18299C13.5791 2.15359 13.8796 2.13889 14.1205 2.37985C14.3615 2.6208 14.3468 2.92128 14.3174 3.52225C14.2418 5.06733 13.7792 6.52727 12.6641 7.64239L11.6737 8.63279C10.8581 9.44839 10.6262 9.68033 10.7974 10.565C10.9664 11.2408 11.13 11.8952 10.6386 12.3866C10.0425 12.9827 9.49875 12.9827 8.90269 12.3866L4.11374 7.59766C3.51768 7.00158 3.51766 6.45786 4.11374 5.86179C4.60513 5.37039 5.25955 5.53395 5.93533 5.70292C6.82002 5.87415 7.05195 5.64225 7.86755 4.82665Z" stroke="white" stroke-linejoin="round"/>
-                                                        <path d="M11.3306 5.16699H11.3366" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        <path d="M1.66669 14.8333L5.00002 11.5" stroke="white" stroke-linecap="round"/>
-                                                        <path d="M5.66669 14.8333L7.00002 13.5" stroke="white" stroke-linecap="round"/>
-                                                        <path d="M1.66669 10.8333L3.00002 9.5" stroke="white" stroke-linecap="round"/>
-                                                    </svg>
-                                                    Soporte:
-                                                    </h3>
-                                                    <h2 class="font-gilroy_regular text-white text-sm" x-text="producto.sku"></h2>
-                                                </div>
+                                                
+                                                    <div class="flex flex-col">
+                                                        <template x-for="caracteristica in producto.caracteristicas" :key="caracteristica">
+                                                            <ul class="flex flex-row gap-2 list-disc list-inside">
+                                                                <li class="text-[#0B2A51] text-base font-gilroy_regular w-full" x-text="caracteristica"></li>
+                                                            </ul>
+                                                        </template>
+                                                    </div>
+                                                
                                             </div>   
 
                                             <!-- Botón de WhatsApp -->
                                             <div class="flex flex-col justify-center items-start font-gilroy_semibold group">
                                                 <a class="w-full" target="_blank"
                                                     :href="`https://api.whatsapp.com/send?phone=${general?.whatsapp || ''}&text=${encodeURIComponent('Me interesa el servicio: ' + (producto.producto || '') + ' - ' + (producto.extract || '') + ' - S/ ' + (producto.precio || ''))}`">
-                                                    <div class="bg-[#0066FF] w-full px-3 text-center py-3 rounded-3xl tracking-normal">
-                                                        <p class="leading-none text-white text-lg">Lo quiero ahora</p>
+                                                    <div class="bg-[#0E315D] w-full px-3 text-center py-3 rounded-3xl tracking-normal">
+                                                        <p class="leading-none text-white text-lg">Comprar plan</p>
                                                     </div>
                                                 </a>
                                             </div>
@@ -274,13 +233,15 @@
                     </div>
                 </div> 
                 
-                <div class="font-gilroy_semibold text-sm text-center text-white">{{$textoshome->description2section2 ?? 'Ingrese texto'}}</div>
+                <div class="px-[5%] md:px-[10%] font-gilroy_regular text-base text-center text-[#0E315D]">Nuestros planes de hosting cuentan con todo lo necesario para publicar su web y administrar sus  cuentas de correo.
+                    No es necesario que Ud. Tenga  instalado Linux, a través de nuestro panel de control  podrá realizar todas las tareas
+                    de administración en su  cuenta de hosting a través de cualquier explorador web.</div>
             
         </section>
-        
-    </div>
+    </div> 
+    
 
-        <section class="flex flex-col lg:flex-row px-[5%] lg:px-[5%] py-10 lg:py-16 gap-8 md:gap-16 justify-center items-start lg:items-end">
+        {{-- <section class="flex flex-col lg:flex-row px-[5%] lg:px-[5%] py-10 lg:py-16 gap-8 md:gap-16 justify-center items-start lg:items-end">
           <div class="w-full lg:w-1/2 flex flex-col gap-4">
             <h3 class="font-gilroy_regular text-[#001F4F] text-xl line-clamp-1 flex flex-row gap-3 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -317,10 +278,10 @@
           <div class="w-full lg:w-1/2 flex flex-col justify-center items-center">
              <img src="{{asset('images/img/tc_nosotros.png')}}" class="aspect-[590/439] w-[590px] object-contain" />
           </div>
-        </section>
+        </section> --}}
 
 
-        <section class="flex flex-col lg:flex-row px-[5%] lg:px-[5%] pb-10 lg:pb-16 gap-5 md:gap-16 justify-center items-start lg:items-end">
+        {{-- <section class="flex flex-col lg:flex-row px-[5%] lg:px-[5%] pb-10 lg:pb-16 gap-5 md:gap-16 justify-center items-start lg:items-end">
           <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 font-gotham_bold w-full rounded-2xl overflow-hidden  mt-5">
             
             @foreach ($benefit as $benef)
@@ -335,10 +296,10 @@
                 </div>
             @endforeach
           </div>
-        </section>
+        </section> --}}
 
         
-        <section class="bg-cover bg-opacity-100 relative py-10 lg:py-16 flex flex-col gap-10 w-full"  style="background-image: url('{{asset('images/img/tc_home.png')}}');">
+        {{-- <section class="bg-cover bg-opacity-100 relative py-10 lg:py-16 flex flex-col gap-10 w-full"  style="background-image: url('{{asset('images/img/tc_home.png')}}');">
            
             <div class="flex flex-col lg:flex-row lg:justify-between px-[5%] gap-5 md:gap-16">
                 
@@ -396,7 +357,7 @@
 
             </div>
         
-        </section>
+        </section> --}}
 
 
     </main>

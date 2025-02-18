@@ -87,6 +87,19 @@ class IndexController extends Controller
         $testimonie = Testimony::where('status', '=', 1)->where('visible', '=', 1)->get();
         $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
         $productos = Products::where('status', '=', 1)->where('visible', '=', 1)->with('tags')->with('canals')->get();
+        $productos = Products::where('status', 1)
+          ->where('visible', 1)
+          ->with(['tags', 'canals'])
+          ->get()
+          ->map(function ($producto) {
+              // Extraer características desde la descripción
+              preg_match_all('/<p>(.*?)<\/p>/s', $producto->description, $matches);
+              $caracteristicas = array_filter(array_map(fn($text) => trim(strip_tags($text)), $matches[1]), fn($text) => !empty($text));
+
+          // Retornar el producto modificado con las características
+          $producto->caracteristicas = $caracteristicas;
+          return $producto;
+          });
         $category = Category::where('status', '=', 1)
                         ->where('visible', '=', 1)
                         // ->whereHas('productos', function ($query) {

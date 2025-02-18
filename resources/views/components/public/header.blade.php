@@ -41,7 +41,7 @@
                 <div class="flex justify-center items-center z-40">
                     <a href="{{ url('/') }}">
                         <img
-                            src="{{ asset('images/img/tc_logotelecable.svg') }}"
+                            src="{{ asset('images/img/logohostingpapaya.png') }}"
                             alt="Telecable"
                             class="max-w-56"
                         />
@@ -56,24 +56,24 @@
                         <li class="flex flex-col">
                             <a href="{{route('novedades')}}" class="">Planes</a>
                         </li>
-                        <li class="flex flex-col">
+                        {{-- <li class="flex flex-col">
                             <a href="{{route('nosotros')}}" class="">Nosotros</a>
-                        </li>
+                        </li> --}}
                         {{-- <li class="flex flex-col">
                             <a href="{{route('blog.all')}}" class="">Blog</a>
                         </li> --}}
                         <li class="flex flex-col">
                             <a href="{{route('contacto')}}" class="">Contacto</a>
                         </li>
-                        <li class="flex flex-col">
+                        {{-- <li class="flex flex-col">
                           <a id="downloadBtn"  class="cursor-pointer">Descargar App</a>
-                        </li>
+                        </li> --}}
                     </div>
                 </ul>
 
                 <div class="hidden md:flex flex-col justify-center items-center font-gilroy_regular font-semibold">
-                  <a href="{{route('contacto')}}"><div class="bg-[#0066FF] px-4 py-3 my-auto rounded-3xl">
-                      <p class="leading-none text-white">Lo quiero ahora</p>
+                  <a href="{{route('contacto')}}"><div class="bg-[#0E315D] px-4 py-3 my-auto rounded-3xl">
+                      <p class="leading-none text-white">Más información</p>
                   </div></a>
                 </div>
 
