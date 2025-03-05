@@ -51,11 +51,11 @@
                 <ul class="bg-white flex font-gilroy_regular font-semibold text-lg pt-32 fixed inset-0 px-[5%] flex-col lg:flex-row lg:items-center clip-circle-0 peer-checked/menu:clip-circle-full transition-[clip-path] duration-500 gap-5 lg:gap-10 lg:clip-circle-full lg:relative lg:flex lg:justify-items-center lg:p-0 lg:bg-transparent flex-1">
                     <div class="flex flex-col lg:flex-row order-2 lg:order-1 lg:w-full lg:justify-center gap-5 lg:gap-10 text-[#001F4F]">
                         <li class="flex flex-col">
-                            <a href="{{route('index')}}" class="">Inicio</a>
+                            <a href="{{route('index')}}" class="">Planes</a>
                         </li>
-                        <li class="flex flex-col">
+                        {{-- <li class="flex flex-col">
                             <a href="{{route('novedades')}}" class="">Planes</a>
-                        </li>
+                        </li> --}}
                         {{-- <li class="flex flex-col">
                             <a href="{{route('nosotros')}}" class="">Nosotros</a>
                         </li> --}}

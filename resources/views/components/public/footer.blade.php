@@ -6,7 +6,7 @@
         /* Permite el desplazamiento vertical si el contenido excede la altura del modal */
     }
 </style>
-<footer class="bg-[#00388C]">
+<footer style="background: linear-gradient(174deg, #068FFF 4.81%, #045699 217.16%);">
     <div class="grid grid-cols-1 w-full px-[5%] lg:px-[8%] py-10 lg:py-16 gap-10 md:gap-5">
         <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-5 col-span-1" data-aos="fade-up" data-aos-offset="150">
             <div class="flex flex-col gap-3">
@@ -56,7 +56,7 @@
     </div>
 
     <div
-        class="bg-[#001637] flex flex-col items-start gap-3 md:flex-row md:justify-between md:items-center w-full px-[5%] lg:px-[8%] py-5 bg-cover">
+        class="bg-[#0E315D] flex flex-col items-start gap-3 md:flex-row md:justify-between md:items-center w-full px-[5%] lg:px-[8%] py-5 bg-cover">
         <a href="#" target="_blank" class="text-white font-gilroy_regular  text-sm text-center">Copyright &copy; 2025 PapayaHosting.
             Reservados todos los derechos</a>
        

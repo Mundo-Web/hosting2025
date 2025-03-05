@@ -1340,7 +1340,7 @@
                             </div>
                             --}}
 
-                            <div
+                            {{-- <div
                                 class=" grid gap-4 gap-y-2 text-sm grid-cols-1 rounded shadow-lg p-4 px-4 ">
                                 <h4 class="font-semibold text-slate-800 dark:text-slate-100 text-xl tracking-tight">
                                     Tags</h4>
@@ -1361,7 +1361,7 @@
 
                                     </div>
                                 </div>
-                            </div> 
+                            </div>  --}}
 
                         </div>
                     </div>

@@ -79,15 +79,16 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/nosotros', [IndexController::class, 'nosotros'])->name('nosotros');
 Route::get('/innovaciones', [IndexController::class, 'innovaciones'])->name('innovaciones');
 Route::get('/servicios', [IndexController::class, 'novedades'])->name('novedades');
+Route::get('/contacto', [IndexController::class, 'contacto'])->name('contacto');
 
 // Route::get('/servicios', [IndexController::class, 'servicios'])->name('servicios');
-Route::get('/comentario', [IndexController::class, 'comentario'])->name('comentario');
-Route::post('/comentario/nuevo', [IndexController::class, 'hacerComentario'])->name('nuevocomentario');
-Route::get('/contacto', [IndexController::class, 'contacto'])->name('contacto');
-Route::get('/descargables/{filtro}', [IndexController::class, 'catalogosDescargables'])->name('descargables');
-Route::get('/blog', [IndexController::class, 'blog'])->name('blog.all');
-Route::get('/blog/{filtro}', [IndexController::class, 'blog'])->name('blog');
-Route::get('/post/{id}', [IndexController::class, 'detalleBlog'])->name('detalleBlog');
+// Route::get('/comentario', [IndexController::class, 'comentario'])->name('comentario');
+// Route::post('/comentario/nuevo', [IndexController::class, 'hacerComentario'])->name('nuevocomentario');
+
+// Route::get('/descargables/{filtro}', [IndexController::class, 'catalogosDescargables'])->name('descargables');
+// Route::get('/blog', [IndexController::class, 'blog'])->name('blog.all');
+// Route::get('/blog/{filtro}', [IndexController::class, 'blog'])->name('blog');
+// Route::get('/post/{id}', [IndexController::class, 'detalleBlog'])->name('detalleBlog');
 
 
 /* Proceso de pago */
@@ -95,13 +96,14 @@ Route::get('/carrito', [IndexController::class, 'carrito'])->name('carrito');
 Route::get('/pago', [IndexController::class, 'pago'])->name('pago');
 Route::post('/procesar/pago', [IndexController::class, 'procesarPago'])->name('procesar.pago');
 Route::post('/agradecimiento', [IndexController::class, 'agradecimiento'])->name('agradecimiento');
+
 /* Catálogo y producto */
-Route::get('/producto/{id}', [IndexController::class, 'producto'])->name('producto');
-Route::get('/catalogo', [IndexController::class, 'catalogo'])->name('catalogo.all');
-Route::get('/catalogo/{filtro}', [IndexController::class, 'catalogo'])->name('catalogo');
+// Route::get('/producto/{id}', [IndexController::class, 'producto'])->name('producto');
+// Route::get('/catalogo', [IndexController::class, 'catalogo'])->name('catalogo.all');
+// Route::get('/catalogo/{filtro}', [IndexController::class, 'catalogo'])->name('catalogo');
 Route::post('carrito/buscarProducto', [CarritoController::class, 'buscarProducto'])->name('carrito.buscarProducto');
 Route::get('/coleccion/{filtro}', [IndexController::class, 'coleccion'])->name('coleccion');
-Route::get('/liquidacion', [IndexController::class, 'liquidacion'])->name('liquidacion');
+// Route::get('/liquidacion', [IndexController::class, 'liquidacion'])->name('liquidacion');
 Route::get('/buscar', [IndexController::class, 'searchProduct'])->name('buscar');
 Route::post('/procesarcarrito', [IndexController::class, 'procesarCarrito'])->name('procesar.carrito');
 Route::post('catalogo_filtro_ajax', [IndexController::class, 'catalogoFiltroAjax'])->name('catalogo_filtro_ajax');

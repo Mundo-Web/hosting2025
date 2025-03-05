@@ -92,19 +92,17 @@
     <main>
         
        
-        <section class="bg-center  lg:h-svh bg-cover bg-no-repeat flex flex-col justify-center relative px-[5%]">
-            {{-- style="background-image: url({{asset('images/img/tc_banner.png')}})"                    --}}
-            {{-- <img class="object-cover absolute top-0 left-0 h-full object-left w-full bg-gradient-to-r from-[#00388C] to-transparent" src="{{asset('images/img/tc_textura.svg')}}" /> --}}
-            {{-- <img class="object-cover absolute bottom-0 right-0 h-full object-bottom w-full" src="{{asset('images/img/tc_textura2.svg')}}" /> --}}
+        <section class="bg-center  lg:h-svh bg-cover bg-no-repeat flex flex-col justify-center relative px-[5%] bg-[#f8f8f8]">
+           
             <div class="flex flex-col lg:flex-row py-0 h-full justify-center items-start lg:items-end rounded-3xl overflow-hidden">
                 
-                <div class="z-20 w-full min-h-[300px] px-[5%] h-full lg:w-1/2 flex flex-col justify-center bg-gradient-to-b from-[#068FFF] to-[#045699]">
+                <div class="z-20 w-full min-h-[300px] px-[5%] h-full lg:w-1/2 flex flex-col justify-center">
                     
                     <div class="flex flex-col gap-1">
-                            <h3 class="font-gilroy_regular text-white text-xl line-clamp-1 flex flex-row gap-3 items-center">
+                            <h3 class="font-gilroy_regular text-[#0E315D] text-xl line-clamp-1 flex flex-row gap-3 items-center">
                                 {{$textoshome->title1section ?? 'Ingrese texto'}}
                             </h3>
-                            <h2 class="font-gilroy_bold text-white text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl line-clamp-5">{{$textoshome->description1section ?? 'Ingrese texto'}}</h2>
+                            <h2 class="font-gilroy_bold text-[#0B2A51] text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl line-clamp-5">{{$textoshome->description1section ?? 'Ingrese texto'}}</h2>
                             <div class="hidden md:flex flex-col justify-start items-start font-gilroy_regular font-semibold">
                                 <a href="{{route('contacto')}}"><div class="bg-[#0E315D] px-4 xl:px-8 py-3 my-auto rounded-3xl">
                                     <p class="leading-none text-white">Ver planes</p>
@@ -114,16 +112,17 @@
 
                 </div>
 
-                <div class="z-20 w-full h-full lg:w-1/2 flex flex-col justify-end items-start lg:items-end">
-                    <img class="h-full object-left object-cover size-full w-full max-h-[500px] xl:max-h-none" src="{{asset('images/img/portadapapayah.png')}}" />
+                <div class="z-20 w-full h-full lg:w-1/2 flex flex-col justify-center items-start lg:items-end">
+                    <img class="h-full object-left object-contain size-full w-full max-h-[500px] xl:max-h-none" src="{{asset('images/img/bannerhost.png')}}" />
                 </div>
 
             </div> 
+            
         </section>
         
         <section class="flex flex-col justify-center relative px-[5%] pt-10 xl:pt-16">
            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="font-gilroy_bold text-[#0B2A51] text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl line-clamp-5">Elige el Plan Perfecto para tu Proyecto</h2>
+                <h2 class="font-gilroy_bold text-[#0B2A51] text-4xl md:text-4xl lg:text-5xl 2xl:text-7xl line-clamp-5">Elige el Plan Perfecto para tu Proyecto</h2>
                 <h3 class="font-gilroy_regular text-[#0B2A51] text-xl line-clamp-1 flex flex-row gap-3 items-center">
                     Desde sitios personales hasta negocios en crecimiento, tenemos el hosting ideal para ti. Todos incluyen dominio GRATIS y certificado SSL.
                 </h3>
@@ -144,7 +143,7 @@
         }"
     >
         <section class="w-full relative flex justify-center items-center">
-            <div class="flex flex-wrap justify-center items-center max-w-3xl mx-auto gap-x-10 font-gotham_bold w-full overflow-hidden rounded-full bg-[#F4F4F4] mt-5">
+            <div class="flex flex-wrap justify-center items-center max-w-3xl mx-auto gap-x-10 font-gotham_bold w-auto overflow-hidden rounded-full bg-[#F4F4F4] mt-5">
                 <template x-for="(cat, index) in categories" :key="index">
                     <div class="flex flex-row gap-5 md:gap-0 md:flex-col items-center justify-start md:justify-center md:items-center px-3 py-3 cursor-pointer">
                         <div class="flex flex-col px-5 py-2 rounded-3xl"
@@ -240,124 +239,54 @@
         </section>
     </div> 
     
-
-        {{-- <section class="flex flex-col lg:flex-row px-[5%] lg:px-[5%] py-10 lg:py-16 gap-8 md:gap-16 justify-center items-start lg:items-end">
-          <div class="w-full lg:w-1/2 flex flex-col gap-4">
-            <h3 class="font-gilroy_regular text-[#001F4F] text-xl line-clamp-1 flex flex-row gap-3 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <path d="M16.3334 3.5H11.6667C7.26693 3.5 5.06705 3.5 3.70021 4.86683C2.33337 6.23367 2.33337 8.43355 2.33337 12.8333C2.33337 17.2331 2.33337 19.4331 3.70021 20.7998C5.06705 22.1667 7.26693 22.1667 11.6667 22.1667H16.3334C20.7331 22.1667 22.9331 22.1667 24.2998 20.7998C25.6667 19.4331 25.6667 17.2331 25.6667 12.8333C25.6667 8.43355 25.6667 6.23367 24.2998 4.86683C22.9331 3.5 20.7331 3.5 16.3334 3.5Z" stroke="#001F4F" stroke-width="1.75" stroke-linecap="round"/>
-                    <path d="M19.7167 18.0833C19.7167 17.0524 20.5524 16.2167 21.5833 16.2167M15.9833 18.0833C15.9833 14.9905 18.4905 12.4833 21.5833 12.4833M12.25 18.0833C12.25 12.9287 16.4287 8.75 21.5833 8.75" stroke="#001F4F" stroke-width="1.75" stroke-linecap="round"/>
-                    <path d="M21 22.167L22.1667 24.5003" stroke="#001F4F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7.00004 22.167L5.83337 24.5003" stroke="#001F4F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                {{$textoshome->title3section ?? 'Ingrese texto'}}
-            </h3>
-            @php
-                $texto = $textoshome->description3section ?? "Ingrese un texto";
-                $texto_formateado = preg_replace('/\*(.*?)\*/', '<span class="text-[#59C402] font-gilroy_bold">$1</span>', e($texto));
-            @endphp
-            
-            <h2 class="font-gilroy_medium text-[#001F4F] text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl line-clamp-2">
-                {!! $texto_formateado !!}
-            </h2>
-            
-            <div class="flex flex-col gap-2 text-[#001637] font-gilroy_regular text-lg">
-                {!! $textoshome->description3section3 ?? "Ingrese texto" !!}
-            </div>
-
-            <div class="flex flex-col justify-center items-start font-gilroy_semibold group">
-                <a href="{{route('nosotros')}}">
-                    <div class="bg-[#0066FF] w-auto px-6 text-center py-3 rounded-3xl tracking-normal">
-                        <p class="leading-none text-white text-lg">Sobre nosotros</p>
-                    </div>
-                </a>
-            </div>
-
-          </div>
-
-          <div class="w-full lg:w-1/2 flex flex-col justify-center items-center">
-             <img src="{{asset('images/img/tc_nosotros.png')}}" class="aspect-[590/439] w-[590px] object-contain" />
-          </div>
-        </section> --}}
-
-
-        {{-- <section class="flex flex-col lg:flex-row px-[5%] lg:px-[5%] pb-10 lg:pb-16 gap-5 md:gap-16 justify-center items-start lg:items-end">
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 font-gotham_bold w-full rounded-2xl overflow-hidden  mt-5">
-            
-            @foreach ($benefit as $benef)
-                @php
-                    $texto = $benef->titulo;
-                    $textoFormateado = preg_replace('/\*(.*?)\*/', '<span class="font-gilroy_bold">$1</span>', e($texto));
-                @endphp
-                <div class="flex flex-col justify-center items-center px-6 py-7 bg-[#59C4021A] group hover:bg-[#004FC6]">
-                    <img class="w-12 h-12 object-contain group-hover:invert" src="{{asset($benef->icono)}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';"/>
-                    <h3 class="text-[#001637] group-hover:text-white text-lg xl:text-xl font-gilroy_regular mt-5 text-center line-clamp-2">{!!$textoFormateado!!}</h3>
-                    <h2 class="mt-2 text-[#001637] group-hover:text-white text-base font-gilroy_regular text-center h-24 line-clamp-4 flex flex-col justify-start">{{$benef->descripcion}}</h2>
-                </div>
-            @endforeach
-          </div>
-        </section> --}}
-
         
-        {{-- <section class="bg-cover bg-opacity-100 relative py-10 lg:py-16 flex flex-col gap-10 w-full"  style="background-image: url('{{asset('images/img/tc_home.png')}}');">
+        <section class="relative pb-10 lg:pb-16 w-full px-[5%] md:px-[8%]">
            
-            <div class="flex flex-col lg:flex-row lg:justify-between px-[5%] gap-5 md:gap-16">
-                
-                <div class="flex flex-col gap-2">
-                   <h3 class="font-gilroy_regular text-white text-xl line-clamp-1 flex flex-row gap-3 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                        <path d="M16.3334 3.5H11.6667C7.26693 3.5 5.06705 3.5 3.70021 4.86683C2.33337 6.23367 2.33337 8.43355 2.33337 12.8333C2.33337 17.2331 2.33337 19.4331 3.70021 20.7998C5.06705 22.1667 7.26693 22.1667 11.6667 22.1667H16.3334C20.7331 22.1667 22.9331 22.1667 24.2998 20.7998C25.6667 19.4331 25.6667 17.2331 25.6667 12.8333C25.6667 8.43355 25.6667 6.23367 24.2998 4.86683C22.9331 3.5 20.7331 3.5 16.3334 3.5Z" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round"/>
-                        <path d="M19.7167 18.0833C19.7167 17.0524 20.5524 16.2167 21.5833 16.2167M15.9833 18.0833C15.9833 14.9905 18.4905 12.4833 21.5833 12.4833M12.25 18.0833C12.25 12.9287 16.4287 8.75 21.5833 8.75" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round"/>
-                        <path d="M21 22.167L22.1667 24.5003" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.00004 22.167L5.83337 24.5003" stroke="#FFFFFF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    {{$textoshome->title4section ?? 'Ingrese texto'}}
-                   </h3>
-                    @php
-                        $texto2 = $textoshome->description4section ?? "Ingrese un texto";
-                        $texto_formateado2 = preg_replace('/\*(.*?)\*/', '<span class="text-[#59C402] font-gilroy_bold">$1</span>', e($texto2));
-                    @endphp
-                   <h2 class="font-gilroy_medium text-white text-4xl lg:text-5xl 2xl:text-7xl lg:line-clamp-2 max-w-xl">{!! $texto_formateado2 !!}</h2>
+            <div class="flex flex-col lg:flex-row gap-10 p-5 md:p-10" style="background: linear-gradient(193deg, #FFF 5.05%, #FAFAFA 35.82%);">
+
+                <div class="flex flex-col w-full lg:w-2/5">
+                    <img class="h-full object-center  object-contain size-full w-full max-h-[500px] xl:max-h-none" src="{{asset('images/img/banner2hosting.png')}}" />
                 </div>
 
-                <div class="flex flex-col gap-2 max-w-xs bg-black bg-opacity-50 rounded-2xl p-6">
-                    <h2 class="font-gilroy_bold text-white text-2xl line-clamp-1 ">{{$textoshome->titlebenefit1 ?? 'Ingrese texto'}}</h2>
-                    <p class="font-gilroy_regular text-white text-lg line-clamp-5">{{$textoshome->descriptionbenefit1 ?? 'Ingrese texto'}}</p>
-                    <div class="flex flex-col justify-center items-start font-gilroy_semibold group">
-                        <a href="{{route('contacto')}}"><div class="bg-[#0066FF] w-auto px-6 text-center py-3 rounded-3xl tracking-normal">
-                            <p class="leading-none text-white text-lg">Lo quiero ahora</p>
-                        </div></a>
+
+                <div class="flex flex-col lg:justify-center gap-5  w-full lg:w-3/5">
+                    
+                    <div class="flex flex-col gap-2">
+                        <h2 class="font-gilroy_bold text-[#0B2A51] text-4xl md:text-4xl 2xl:text-7xl line-clamp-5">Hosting que Potencia tu Éxito Online</h2>
+                        <h3 class="font-gilroy_regular text-[#0B2A51] text-xl line-clamp-1 flex flex-row gap-3 items-center">
+                            No es solo un hosting, es la base de tu crecimiento digital. Disfruta de velocidad ultrarrápida, seguridad avanzada y un soporte 24/7 que realmente responde.
+                        </h3>
                     </div>
-                </div>
 
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-5">
+                        <div class="flex flex-col gap-2 max-w-xs bg-white bg-opacity-50 rounded-2xl p-5">
+                            <img class="h-14 w-14 overflow-hidden rounded-full object-contain" src="{{asset('images/img/iconocohete.png')}}" />
+                            <h2 class="font-gilroy_bold text-[#0E315D] text-2xl line-clamp-2 leading-none">Velocidad Optimizada</h2>
+                            <p class="font-gilroy_regular text-[#0E315D] text-base line-clamp-5">Servidores con SSD y Cloudflare CDN.</p>
+                        </div>
+
+                        <div class="flex flex-col gap-2 max-w-xs bg-white bg-opacity-50 rounded-2xl p-5">
+                            <img class="h-14 w-14 overflow-hidden rounded-full object-contain" src="{{asset('images/img/iconocohete.png')}}" />
+                            <h2 class="font-gilroy_bold text-[#0E315D] text-2xl line-clamp-2 leading-none">Seguridad Avanzada</h2>
+                            <p class="font-gilroy_regular text-[#0E315D] text-base line-clamp-5">Protección DDoS y certificados SSL gratis.</p>
+                        </div>
+
+                        <div class="flex flex-col gap-2 max-w-xs bg-white bg-opacity-50 rounded-2xl p-5">
+                            <img class="h-14 w-14 overflow-hidden rounded-full object-contain" src="{{asset('images/img/iconocohete.png')}}" />
+                            <h2 class="font-gilroy_bold text-[#0E315D] text-2xl line-clamp-2 leading-none">Soporte 24/7</h2>
+                            <p class="font-gilroy_regular text-[#0E315D] text-base line-clamp-5">Asistencia experta en cualquier momento.</p>
+                        </div>
+
+                        <div class="flex flex-col gap-2 max-w-xs bg-white bg-opacity-50 rounded-2xl p-5">
+                            <img class="h-14 w-14 overflow-hidden rounded-full object-contain" src="{{asset('images/img/iconocohete.png')}}" />
+                            <h2 class="font-gilroy_bold text-[#0E315D] text-2xl line-clamp-2 leading-none">Escalabilidad</h2>
+                            <p class="font-gilroy_regular text-[#0E315D] text-base line-clamp-5">Desde blogs hasta e-commerce de alto tráfico.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-
-
-            <div class="flex flex-col lg:flex-row lg:justify-between px-[5%] gap-5 md:gap-16">
-                
-                <div class="flex flex-col gap-2 max-w-xs bg-black bg-opacity-50 rounded-2xl p-6">
-                    <h2 class="font-gilroy_bold text-white text-2xl line-clamp-1 ">{{$textoshome->titlebenefit2 ?? 'Ingrese texto'}}</h2>
-                    <p class="font-gilroy_regular text-white text-lg line-clamp-5">{{$textoshome->descriptionbenefit2 ?? 'Ingrese texto'}}</p>
-                    <div class="flex flex-col justify-center items-start font-gilroy_semibold group">
-                        <a href="{{route('contacto')}}"><div class="bg-[#0066FF] w-auto px-6 text-center py-3 rounded-3xl tracking-normal">
-                            <p class="leading-none text-white text-lg">Lo quiero ahora</p>
-                        </div></a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-2 max-w-xs bg-black bg-opacity-50 rounded-2xl p-6">
-                    <h2 class="font-gilroy_bold text-white text-2xl line-clamp-1 ">{{$textoshome->titlebenefit3 ?? 'Ingrese texto'}}</h2>
-                    <p class="font-gilroy_regular text-white text-lg line-clamp-5">{{$textoshome->descriptionbenefit3 ?? 'Ingrese texto'}}</p>
-                    <div class="flex flex-col justify-center items-start font-gilroy_semibold group">
-                        <a href="{{route('contacto')}}"><div class="bg-[#0066FF] w-auto px-6 text-center py-3 rounded-3xl tracking-normal">
-                            <p class="leading-none text-white text-lg">Lo quiero ahora</p>
-                        </div></a>
-                    </div>
-                </div>
-
-            </div>
-        
-        </section> --}}
+        </section>
 
 
     </main>

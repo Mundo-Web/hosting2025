@@ -15,12 +15,12 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         //
-        $cat = ['Plan Duo', 'Internet Fibra Óptica','Televisión por cable'];
-        $cat2 = ['Internet + Televisión por cable', 
-                'Conexión 100% fibra óptica',
-                'Conexión 100% fibra óptica'];
-        $ids = [1, 2, 3];
-        for ($i = 0; $i < 3; $i++) {
+        $cat = ['Hosting Emprende', 'Hosting Empresa'];
+        $cat2 = ['Descripcion Hosting Emprende', 
+                'Descripcion Hosting Empresa'
+                ];
+        $ids = [1, 2];
+        for ($i = 0; $i < 2; $i++) {
             Category::create([
                 'id' => $ids[$i],
                 'name' => $cat[$i],
